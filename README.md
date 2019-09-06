@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # guanlisystem
 
 > A Vue.js project
@@ -32,3 +33,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 =======
 # guanlitest
 >>>>>>> ca584ba288c81d1650b0ff514b94715fab4a2a2a
+=======
+# guanlitest
+>>>>>>> 1a9f289acf0b7ceb9d1ac0958a15b8748a7f9071
