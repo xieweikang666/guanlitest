@@ -35,6 +35,10 @@
         <i class="el-icon-document"></i>
         <span slot="title">练习界面</span>
       </el-menu-item>
+      <el-menu-item index="/Add">
+        <i class="el-icon-document"></i>
+        <span slot="title">地图</span>
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

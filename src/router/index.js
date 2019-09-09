@@ -37,6 +37,11 @@ export default new Router({
           component: () => import('../components/DataManagement/FormManagement.vue')
         },
         {
+          path: '/Add',
+          name: 'Add',
+          component: () => import('../components/DataManagement/Add.vue')
+        },
+        {
           path: '/User',
           name: 'User',
           component: () => import('../components/UserManagement.vue')

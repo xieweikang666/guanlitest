@@ -2,6 +2,7 @@
   <div>
     <!-- 头部 -->
     <el-header>
+      <add></add>
       <h2>welcome</h2>
       <User></User>
     </el-header>
@@ -28,12 +29,14 @@ import Home from "../components/Home.vue";
 import LeftSide from "../components/LeftSide.vue";
 import TopBread from "../components/TopBread.vue";
 import User from "../components/User.vue";
+import Add from "../components/Address.vue";
 export default {
   components: {
     Home,
     LeftSide,
     TopBread,
-    User
+    User,
+    Add
   },
   data() {
     return {
@@ -78,6 +81,7 @@ export default {
 </script>
 
 <style scoped>
+
 .el-header {
   background: rgb(255, 208, 0);
   text-align: center;
