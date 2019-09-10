@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="swipe">
+    <!-- <div id="swipe">
       <ul v-for="(imgList,index) in imgList" v-show="index===mark" name="img" :key="index">
         <li>
           <img :src="imgList" alt />
@@ -9,6 +9,16 @@
       <div id="btns">
         <span v-for="(item,index) in imgList.length" :key="index" @click="changeImg(index)"></span>
       </div>
+    </div>-->
+
+    <div class="co">
+      <transition-group enter-active-class="bounceInLeft" leave-active-class="bounceOutRight">
+        <div class="comicImg" v-for="(item,index) in comicList" :key="index">
+          <img :src="item" alt="表情图" v-if="index ==mark" />
+        </div>
+      </transition-group>
+
+      <el-button @click="changeComic()">点击切换</el-button>
     </div>
   </div>
 </template>
@@ -18,30 +28,45 @@ export default {
   data() {
     return {
       mark: 0,
+      sign: "",
       imgList: [
         "../../static/swipePic/pic1.jpg",
         "../../static/swipePic/pic2.jpg",
         "../../static/swipePic/pic3.jpg",
         "../../static/swipePic/pic4.jpg"
+      ],
+      comicList: [
+        "../../static/comicPic/comic1.jpg",
+        "../../static/comicPic/comic2.jpg",
+        "../../static/comicPic/comic3.jpg",
+        "../../static/comicPic/comic4.jpg",
+        "../../static/comicPic/comic5.jpg"
       ]
     };
   },
-  mounted() {
-    setInterval(() => {
-      this.autoPlay();
-    }, 2000);
-  },
+  // mounted() {
+  //   setInterval(() => {
+  //     this.autoPlay();
+  //   }, 2000);
+  // },
   methods: {
     changeImg(i) {
       this.mark = i;
     },
-    autoPlay() {
-      this.mark++;
+    changeComic() {
       if (this.mark == 4) {
         this.mark = 0;
-        return;
+      } else {
+        this.mark++;
       }
     }
+    // autoPlay() {
+    //   this.mark++;
+    //   if (this.mark == 4) {
+    //     this.mark = 0;
+    //     return;
+    //   }
+    // }
   }
 };
 </script>
@@ -79,6 +104,11 @@ export default {
   border: 3px solid rgb(169, 212, 14);
   border-radius: 50%;
   cursor: pointer;
+}
+.co {
+  width: 200px;
+  height: 200px;
+  background: skyblue;
 }
 .active {
   color: red;
